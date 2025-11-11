@@ -42,7 +42,7 @@ class FactorVAE(nn.Module):
         mu, logvar = self.encoder(x)
         z = self.reparameterize(mu, logvar)
         recon_x = self.decoder(z)
-        return recon_x, mu, logvar
+        return recon_x, mu, logvar, z
 
     def reparameterize(self, mu, logvar):
         std = torch.exp(0.5 * logvar)

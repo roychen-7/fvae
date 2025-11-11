@@ -1,0 +1,31 @@
+# Configuration file for FactorVAE with Qlib Financial Data
+
+# Model hyperparameters
+model:
+  latent_dim: 20  # Latent dimension for disentangled factors
+  hidden_dims: [256, 128, 64]  # Hidden layer dimensions
+
+# Training hyperparameters
+training:
+  batch_size: 128
+  learning_rate: 0.0001
+  num_epochs: 50
+  gamma: 10.0  # Weight for the Total Correlation penalty
+
+# Dataset settings
+dataset:
+  name: 'alpha158'  # Options: 'alpha158', 'alpha360'
+  start_time: '2015-01-01'
+  end_time: '2020-12-31'
+  instruments: 'csi300'  # Market instruments
+  num_stocks: 200  # Number of stocks to load for training
+
+# Logging and checkpoint settings
+logging:
+  log_interval: 5
+  checkpoint_interval: 10
+
+# Hardware settings
+hardware:
+  use_cuda: false
+  num_workers: 4
