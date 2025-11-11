@@ -1,0 +1,30 @@
+# Configuration file for FactorVAE
+
+# Model hyperparameters
+model:
+  input_channels: 3
+  latent_dim: 10
+  output_channels: 3
+
+# Training hyperparameters
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  num_epochs: 100
+  gamma: 6.4  # Weight for the Total Correlation penalty
+
+# Dataset settings
+# Specify the dataset to be used for training
+# Options: '2d_shapes', '3d_shapes', 'celeba'
+dataset:
+  name: '2d_shapes'
+
+# Logging and checkpoint settings
+logging:
+  log_interval: 10
+  checkpoint_interval: 5
+
+# Hardware settings
+hardware:
+  use_cuda: true
+  num_workers: 4

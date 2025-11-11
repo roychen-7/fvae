@@ -1,0 +1,16 @@
+# FactorVAE Project Dependencies
+
+# Core Libraries
+numpy>=1.18.0
+scipy>=1.4.0
+matplotlib>=3.1.0
+pyyaml>=5.3.0
+
+# PyTorch
+# Ensure compatibility with CUDA if available
+# Install the appropriate version based on your CUDA version
+# Example for CUDA 10.2:
+torch>=1.7.0+cu102 torchvision>=0.8.0+cu102 torchaudio>=0.7.0
+
+# Additional Libraries
+# Add any other libraries that might be needed for experiments or data handling
